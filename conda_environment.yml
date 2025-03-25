@@ -4,14 +4,17 @@ name: gpuocean
 channels:
 - conda-forge
 
-# If you update this list, please also update gpu_ocean/requirements.txt
 dependencies:
-- python=3.7
+- python
 - conda-build
-- ipykernel
+- jupyterlab
 - numpy
-- matplotlib=3.3.3
+- matplotlib
 - netcdf4
+- cuda-nvcc
+- cuda-cudart
+- cuda-version=12
+- pycuda
 - pytest
 - xmlrunner
 - scipy
@@ -28,6 +31,7 @@ dependencies:
 - seawater
 - gitpython
 - scikit-image
+
 # Activate environment and install the following packages using pip:
 # $ conda activate gpuocean
 # $ pip3 install --trusted-host files.pythonhosted.org --no-deps -U pycuda
